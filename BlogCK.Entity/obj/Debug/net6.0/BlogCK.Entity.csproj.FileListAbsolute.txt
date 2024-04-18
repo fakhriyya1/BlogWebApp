@@ -1,0 +1,15 @@
+D:\Projects\BlogCK\BlogCK.Entity\bin\Debug\net6.0\BlogCK.Entity.deps.json
+D:\Projects\BlogCK\BlogCK.Entity\bin\Debug\net6.0\BlogCK.Entity.dll
+D:\Projects\BlogCK\BlogCK.Entity\bin\Debug\net6.0\BlogCK.Entity.pdb
+D:\Projects\BlogCK\BlogCK.Entity\bin\Debug\net6.0\BlogCK.Core.dll
+D:\Projects\BlogCK\BlogCK.Entity\bin\Debug\net6.0\BlogCK.Core.pdb
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.csproj.AssemblyReference.cache
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.AssemblyInfoInputs.cache
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.AssemblyInfo.cs
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.csproj.CoreCompileInputs.cache
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.csproj.CopyComplete
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.dll
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\refint\BlogCK.Entity.dll
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\BlogCK.Entity.pdb
+D:\Projects\BlogCK\BlogCK.Entity\obj\Debug\net6.0\ref\BlogCK.Entity.dll

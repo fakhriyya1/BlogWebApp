@@ -1,0 +1,58 @@
+﻿@model UserAddDto
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">User Management/</span> Add User</h4>
+
+    <!-- Basic Layout -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form asp-controller="User" asp-action="Add" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="RoleId">Roles</label>
+                            <div class="input-group">
+                                <select class="form-select" asp-for="RoleId" asp-items="@(new SelectList(Model.Roles,"Id","Name"))"></select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="FirstName">First Name</label>
+                            <input type="text" class="form-control" placeholder="First Name" asp-for="FirstName">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="LastName">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Last Name" asp-for="LastName">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Email">Email</label>
+                            <input type="email" class="form-control" placeholder="Email" asp-for="Email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="PhoneNumber">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Phone Number" asp-for="PhoneNumber">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Password">Password</label>
+                            <input type="password" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" asp-for="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

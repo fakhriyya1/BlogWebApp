@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\sneat-1.0.0\**" />
+    <Content Remove="wwwroot\sneat-1.0.0\**" />
+    <EmbeddedResource Remove="wwwroot\sneat-1.0.0\**" />
+    <None Remove="wwwroot\sneat-1.0.0\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\dashboardIndex.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\dashboardIndex.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="NToastNotify" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogCK.Data\BlogCK.Data.csproj" />
+    <ProjectReference Include="..\BlogCK.Service\BlogCK.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\article-images\" />
+    <Folder Include="wwwroot\images\user-images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\dashboardIndex.js" />
+    <None Include="wwwroot\stand_blog\assets\fonts\flexslider-icon.svg" />
+    <None Include="wwwroot\stand_blog\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\stand_blog\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\stand_blog\assets\fonts\slick.svg" />
+    <None Include="wwwroot\stand_blog\assets\js\accordions.js" />
+    <None Include="wwwroot\stand_blog\assets\js\custom.js" />
+    <None Include="wwwroot\stand_blog\assets\js\isotope.js" />
+    <None Include="wwwroot\stand_blog\assets\js\owl.js" />
+    <None Include="wwwroot\stand_blog\assets\js\slick.js" />
+    <None Include="wwwroot\stand_blog\prepros-6.config" />
+    <None Include="wwwroot\stand_blog\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\stand_blog\vendor\jquery\jquery.min.js" />
+  </ItemGroup>
+
+</Project>

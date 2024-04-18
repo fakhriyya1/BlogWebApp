@@ -1,0 +1,52 @@
+﻿@model ArticleUpdateDto
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Article Management/</span> Update Article</h4>
+
+    <!-- Basic Layout -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form asp-controller="Article" asp-action="Update" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <input type="hidden" asp-for="Id"/>
+                        <input type="hidden" asp-for="Image.FileName"/>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Image.FileName">Current Photo</label>
+                            <img src="~/images/@Model.Image.FileName" style="width:300px; height:fit-content" class="form-control" alt="@Model.Title" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="CategoryId">Category</label>
+                            <select id="categoryList" class="form-control" asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories,"Id","Name"))"></select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Title">Title</label>
+                            <input type="text" class="form-control" placeholder="Title" asp-for="Title">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Photo">Choose a photo</label>
+                            <input asp-for="Photo" type="file" accept="image/*" class="form-control">
+                            <span asp-validation-for="Photo" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Content">Content</label>
+                            <textarea style="min-height: 200px" asp-for=Content class="form-control" placeholder="Your blog content goes here..."></textarea>
+                            <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

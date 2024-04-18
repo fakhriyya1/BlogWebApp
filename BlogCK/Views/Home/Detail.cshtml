@@ -1,0 +1,56 @@
+﻿@model ArticleDto
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<section class="blog-posts">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="all-blog-posts">
+                    <div class="row">
+                            <div class="col-lg-12">
+                                <div class="blog-post">
+                                    <div class="blog-thumb">
+                                    <img src="~/images/@Model.Image.FileName" alt="">
+                                    </div>
+                                    <div class="down-content">
+                                        <a href="#"><h4>@Model.Title</h4></a>
+                                        <ul class="post-info">
+                                            <li class="gray-text">@Model.User.FirstName @Model.User.LastName</li>
+                                            <li class="gray-text">@Model.CreatedDate.ToString("dd-MMM-yyyy")</li>
+                                            <li class="gray-text"><i class="fa-solid fa-eye"></i> @Model.ViewCount</li>
+                                        </ul>
+                                        <p> 
+                                            @Model.Content
+                                        </p>
+                                        <div class="post-options">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <ul class="post-tags">
+                                                        <li><i class="fa fa-tags"></i></li>
+                                                        <li>@Model.Category.Name</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="row">
+                        @await Component.InvokeAsync("RecentPosts")
+                        @await Component.InvokeAsync("HomeCategories")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

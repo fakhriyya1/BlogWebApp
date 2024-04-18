@@ -1,0 +1,76 @@
+﻿@model UserProfileDto
+@{
+    ViewData["Title"] = "Profile";
+}
+
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    <h4 class="py-3 mb-4">
+        <span class="text-muted fw-light">Account Settings /</span> Account
+    </h4>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Profile Details</h5>
+                <!-- Account -->
+                <form asp-controller="User" asp-action="Profile" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="Image.FileName" />
+                    <div class="card-body">
+                        <div class="d-flex align-items-start gap-4">
+                            <img src="~/images/@Model.Image.FileName" alt="user-avatar" class="d-block rounded" style="object-fit: cover; object-position: 100% 0;" height="100" width="100" id="uploadedAvatar">
+                            <div class="button-wrapper">
+                                <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                    <span class="d-none d-sm-block">Upload new photo</span>
+                                    <i class="bx bx-upload d-block d-sm-none"></i>
+                                    <input asp-for="Photo" type="file" id="upload" class="account-file-input" hidden="" accept="image/*">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-0">
+                    <div class="card-body">
+                        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label asp-for="FirstName" class="form-label">First Name</label>
+                                <input class="form-control" type="text" asp-for="FirstName" autofocus="">
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label asp-for="LastName" class="form-label">Last Name</label>
+                                <input class="form-control" type="text" asp-for="LastName" autofocus="">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label asp-for="Email" class="form-label">Email</label>
+                                <input class="form-control" type="email" asp-for="Email" autofocus="" readonly>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                                <input class="form-control" type="text" asp-for="PhoneNumber" autofocus="">
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label asp-for="CurrentPassword" class="form-label">Current Password</label>
+                                <input class="form-control" type="password" asp-for="CurrentPassword" autofocus="">
+                                <span asp-validation-for="CurrentPassword" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label asp-for="NewPassword" class="form-label">New Password (Optional)</label>
+                                <input class="form-control" type="password" asp-for="NewPassword" autofocus="">
+                                <span asp-validation-for="NewPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                        </div>
+                </form>
+            </div>
+            <!-- /Account -->
+        </div>
+    </div>
+</div>
+</div>

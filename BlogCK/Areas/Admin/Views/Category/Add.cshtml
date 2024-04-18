@@ -1,0 +1,31 @@
+﻿@model CategoryAddDto
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">Category Management/</span> Category Article</h4>
+
+    <!-- Basic Layout -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form asp-controller="Category" asp-action="Add" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class="mb-3">
+                            <label class="form-label" asp-for="Name">Title</label>
+                            <input type="text" class="form-control" id="basic-default-company" placeholder="Name" asp-for="Name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
